@@ -5,51 +5,12 @@ body {
   color: #272829;
 }
 
-a {
-  color: #149ddd;
-}
 
-a:hover {
-  color: #37b3ed;
-  text-decoration: none;
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
 }
 
-.transition-1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 101;
-  background-color: var(--dark);
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.5s ease-out;
-}
-
-.transition-1.is-active {
-  opacity: 1;
-  pointer-events: all;
-}
-
-.transition-2 {
-  position: fixed;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  bottom: 0;
-  z-index: 101;
-  background-color: var(--dark);
-  transition: 0.5s ease-out;
-}
-
-.transition-2.is-active {
-  left: 0px;
-}
 
 /*----------header--------*/
 #header {
@@ -58,7 +19,6 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   bottom: 0;
   width: 360px;
-  transition: all ease-in-out 0.5;
   z-index: 9997;
   transition: all 0.5s;
   padding: 0 15px;
@@ -95,12 +55,10 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   width: 36px;
   height: 36px;
-  transition: 0.3s;
 }
 
 #header .profile .social-links a:hover {
   background: #149ddd;
-
   color: #fff;
   text-decoration: none;
 }
@@ -145,7 +103,6 @@ h1, h2, h3, h4, h5, h6 {
   color: #a8a9b4;
   padding: 12px 15px;
   margin-bottom: 8px;
-  transition: 0.3s;
   font-size: 15px;
 }
 
@@ -288,11 +245,10 @@ h1, h2, h3, h4, h5, h6 {
 #about {
   background: #000000;
   background-size: cover;
+  background-position: center;
   display: block;
-  margin-left: 350px;
-  transition: all ease-in -.5;
+  margin-left: 360px;
   z-index: 100;
-  transition: all 0.7s;
 }
 
 #about h2 {
@@ -323,7 +279,6 @@ h1, h2, h3, h4, h5, h6 {
 #about ul i {
   font-size: 20px;
   padding-right: 2px;
-
 }
 
 #about p:last-child {
@@ -372,11 +327,11 @@ h1, h2, h3, h4, h5, h6 {
   background: #000000;
   background-color: black;
   background-size:cover;
+  background-position: center;
   display: block;
+  margin: auto;
   margin-left: 350px;
-  transition: all ease-in -.5;
   z-index: 100;
-  transition: all 0.7s;
 }
 
 #portfolio h2 {
@@ -480,107 +435,34 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* ------- services section ------- */
 
+/* ------- contact section ------- */
 
-#services {
-  width: 100%;
-  height: 100vh;
-  background: #000000;
-  background-size: cover;
-}
-
-#services::before{
-  content: "";
-  background: rgba(5,13,24,0.3);
-  position: absolute;
-  bottom: 0;
-  top: 0;
-  left: 0
-  right: 0;
-  z-index: 1;
-}
-
-#services .services-container {
-  position: relative;
-  z-index: 2;
-  min-width: 100px;
-}
-
-#services h1 {
-
-  margin: 0 0 500px 400px;
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 56px;
-  color: #fff;
-}
-
-#services p {
-  color: #fff;
-  margin-bottom: 50px;
-  font-size: 34px;
-  font-family: "Poppins", sans-serif;
-}
-
-#services .button {
-  background-color: #000000;
-  border: 2px solid #e7e7e7;;
-  color: white;
-  padding: 15px 32px;
+#contact{
+  margin: auto;
+  padding: 0;
   text-align: center;
-  text-decoration: none;
-  display: inline-block;
+  background: black;
+  background-size: cover;
+  background-position: center;
+}
+
+#contact h1{
+  color: #ffffff;
+}
+
+#contact h2{
   font-size: 16px;
-  cursor: pointer;
+  color: #ffffff;
 }
 
-#services .button1 {
-  margin: 0 0 -200px 200px;
-
+#contact ul {
+  list-style: none;
+  padding: 70px;
+  color: #ffffff;
 }
 
-#services .button2 {
-  margin: 0 0 0 500px;
-}
-
-#services .button3 {
-  margin: 0 0 0 500px;
-}
-
-#services p span.cursor{
-  display: inline-block;
-  background-color: #ccc;
-  margin-left: 0.1rem;
-  width: 3px;
-  animation: blink 1s infinite;
-}
-
-#services span.cursor.typing {
-  animation: none;
-}
-
-@keyframes blink {
-  0%  { background-color: #ccc; }
-  49% { background-color: #ccc; }
-  50% { background-color: transparent; }
-  99% { background-color: transparent; }
-  100%  { background-color: #ccc; }
-}
-
-@media (min-width:1024px) {
-  #services{
-    background-attachment: fixed
-  }
-}
-@media (max-width:900px) {
-  #services h1 {
-    font-size: 38px;
-    line-height: 36px;
-  }
-  #services h2 {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 30px;
-  }
+#contact ul li {
+  font-size: 32px;
+  padding-bottom: 80px;
 }
